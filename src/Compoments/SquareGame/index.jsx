@@ -151,6 +151,9 @@ export default function N_puzzle_Game(props){
   }
   const handleSquareClick = (value, i)=>{
     return () => {
+      // const audio = document.querySelector("audio.bonk")
+      // audio.load()
+      // audio.play()
       if(value==="miss"||!isStarting) return
       const new_board = swapBoard(i,board)
       if(new_board){
@@ -224,12 +227,13 @@ export default function N_puzzle_Game(props){
         <section className='game-section'>
           <div className='game-winning'>
             <h1>{message}</h1>
-            <p>Total Final Time: {getFinishTime(startTime)} second</p>
+            <p>Total Finish Time: {getFinishTime(startTime)} seconds</p>
             <button className='start wt-btn' onClick={handleGameStart}>Try Again</button>
             <button className='wt-btn' onClick={handleInitialGame}>Back To Menu</button>
           </div>
         </section>
       </div>
+      <audio className='bonk' src="audio/bonk.mp3"></audio>
     </div>
   );
 }

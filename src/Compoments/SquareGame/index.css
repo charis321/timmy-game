@@ -13,8 +13,9 @@ section.game-section{
     align-items: center;
 }
 .game-start-menu{
-    width: 30vw;
+    width: 80vw;
     height: 50vh;
+    max-width: 500px;
     border: 2px solid #fff;
     border-radius: 10px;
     display: flex;
@@ -53,8 +54,6 @@ section.game-section{
     transform: rotateZ(90deg);
 }
 .game-main{
-    width: 50vw;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
