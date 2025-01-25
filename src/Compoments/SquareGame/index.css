@@ -1,0 +1,171 @@
+.square-game-container{
+    height: 100vh;
+    overflow-y: hidden;
+}
+.game-switch-box{
+    margin-top: 0vh;
+    transition: margin-top 0.5s  ease-in-out;
+}
+section.game-section{
+    height: 100vh;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+.game-start-menu{
+    width: 30vw;
+    height: 50vh;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-start-menu h1{
+    font-size: 2rem;
+}
+.game-start-menu .start{
+    margin-bottom: 2rem;
+}
+.game-start-menu .game-img{
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+    background-image: url("/images/n_puzzlle.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.game-start-menu .game-n-control{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.game-start-menu .game-n-control button{
+    font-size: 2rem;
+}
+.game-start-menu .game-n-control button:nth-child(1){
+    transform: rotateZ(-90deg);
+}
+.game-start-menu .game-n-control button:nth-child(3){
+    transform: rotateZ(90deg);
+}
+.game-main{
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-main h1{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.game-content{
+    width: 500px;
+    height: 500px;
+    outline: 2px solid #fff;
+    position: relative;
+    margin-right: 5px;
+}
+.game-content .square{
+    background-color: light dark;
+    outline: 1px solid #333;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    /* animation: spin 0.5s linear; */
+}
+.game-content .square.miss{
+    color: transparent;
+    /* animation: spin 0.5s linear; */
+}
+
+.game-winning{
+    width: 300px;
+    height: 300px;
+    outline: 2px solid #fff;
+    position: relative;
+}
+.game-main-control{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+button.wt-btn{
+    background: none;
+    padding: 5px 20px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+}
+button.wt-btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+button.sm-btn{
+    background: none;
+    padding: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+}
+button.sm-btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+h1{
+    margin: 10px;
+}
+@keyframes spin{
+    0%{
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(30deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+@keyframes wave{
+    0%{
+        transform: scale(1);
+        background-color: light dark;
+    }
+    50%{
+        transform: scale(1.1);
+        background-color: aquamarine;
+    }
+    100%{
+        transform: scale(1);
+        background-color: light dark;
+    }
+}
+@keyframes drop{
+    0%{ 
+        color: #fff;
+        background-color: lightsalmon;
+        border: none;
+        opacity: 0;
+        transform: scale(3) rotateZ(15deg);
+    }
+    100%{
+        color: #fff;
+        background-color: lightsalmon;
+        border: none;
+        opacity: 1;
+        transform: scale(1) rotateZ(0deg);
+    }
+}
